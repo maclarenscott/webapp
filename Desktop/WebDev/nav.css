@@ -1,0 +1,122 @@
+
+body{
+    margin:0;
+    background: #000000;
+    font-family: 'Quicksand', sans-serif;
+    color: #AEFEFF;
+}
+
+nav{
+    border: none;
+    margin-top: 0px;
+    height : 85px;
+    background-color: #072227;
+    border-radius: 0px 0px .5rem .5rem;
+    position:fixed;
+    width: 100%;
+    vertical-align: middle;
+
+
+}
+
+h1{
+    display: inline-block;
+    font-family: 'Quicksand', sans-serif;
+    letter-spacing: 0.01rem;
+    margin: 0em 0px;
+    font-size: 400%;
+    padding-left: 1%;
+    padding-top: none;
+    color: #AEFEFF;
+    height: 1em;
+    transition: 1s cubic-bezier(0.16, 1, 0.3, 1);
+    vertical-align: middle;
+}
+h1:hover{
+    transform: scale(1.1);
+    transition: .3s cubic-bezier(0.16, 1, 0.3, 1);
+    color: #AEFEFF;
+    transform:translate(0px,-2px);
+    box-shadow: 0 0.5em 0.5em -0.7em #AEFEFF;
+    cursor: pointer;
+   
+}
+
+nav form{
+    display: inline-block;
+    float: right;
+    margin-top: 1.7em;
+    margin-right: 1%;
+    background-color: #072227;
+    padding: 0.5em;
+    border-radius: 1em;
+    border: none;
+
+}
+
+nav form *{
+    border-radius: 1em;
+    font-weight: 700;
+    font-family: 'Quicksand', sans-serif;
+    color: #AEFEFF;
+    background-color: #000000;
+    border: none;
+    
+}
+nav form button{
+    text-align: center;
+    vertical-align: middle;
+}
+nav form input{
+    width: 30em;
+    transition: 1s cubic-bezier(0.16, 1, 0.3, 1);
+    vertical-align: middle;
+    
+
+}
+
+nav button:hover{
+    color:#072227;
+    background: #AEFEFF;
+    transition: 1s cubic-bezier(0.16, 1, 0.3, 1);
+
+}
+nav input:focus {
+    font-size: .9rem;
+    outline:none;
+    width: 60em;
+    padding: .6rem;
+    
+
+}
+nav form input:hover{
+    width: 60em;
+    transition: 1s cubic-bezier(0.16, 1, 0.3, 1);
+
+}
+
+section.image-text{
+    width:50vw;
+    height: 500px;
+    background-image: url("https://images.unsplash.com/photo-1491466424936-e304919aada7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1738&q=80");
+    background-size: cover;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    justify-content: center;
+    display: flex;
+    margin: auto;
+    position: relative;
+    top: 10rem;
+    
+}
+
+h2{
+    background-color: #000000;
+    color: #AEFEFF;
+    height: min-content;
+    padding: 0.7rem;
+    border-radius: 1rem;
+    box-shadow: 0px 5px 2px 1px #0f0f0f;
+    
+}
+

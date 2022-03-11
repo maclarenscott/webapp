@@ -1,0 +1,33 @@
+
+body{
+    margin:0;
+}
+.righthead{
+    margin-top: 10px;
+    margin-right: 5px;;
+    display: inline-block;
+    float: right;
+    
+}
+#search{
+    height: 23px;
+}
+button.enterbutton{
+    box-sizing: 15px 40px;
+    background-color: rgb(0, 163, 163);
+
+
+}
+
+
+.lefthead{
+    font-family: monospace;
+    display: inline-block;
+
+}
+
+header{
+    background-color: rgb(68, 68, 68);
+}
+
+

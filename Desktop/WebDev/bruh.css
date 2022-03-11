@@ -1,0 +1,11 @@
+img.pokemon-img{
+    display: inline-block;
+}
+
+span.label{
+    display: inline-block;
+}
+
+#container{
+    text-align: center;
+}

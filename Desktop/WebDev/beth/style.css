@@ -1,0 +1,26 @@
+nav{
+    font-family: "Roboto Serif";
+    background-color: #F7ECDE ;
+
+
+}
+
+#logo{
+    font-size: 2rem;
+}
+#name{
+    transition: .4s;
+}
+#name:hover{
+    color:#54BAB9;
+}
+
+.carousel img {
+    object-fit: cover;
+    width: 100vw;
+    height: 120vh;
+
+}
+
+
+
