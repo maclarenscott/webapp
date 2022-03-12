@@ -1,0 +1,18 @@
+h1{
+    color: #5f003f;
+    text-align: center;
+    width: 40%;
+    font-weight: bold;
+}
+h2{
+    color:#5f003f;
+}
+p{
+    color: black;
+    background-color: aliceblue;
+    text-align: center;
+}
+header{
+    background-color: rgb(72, 112, 146);
+    
+}

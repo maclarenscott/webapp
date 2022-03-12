@@ -1,0 +1,12 @@
+div.container{
+    text-align: center;
+}
+main{
+    padding: 2%;
+    margin:0;
+}
+
+#btn-johnny{
+    display: none;
+}
+
