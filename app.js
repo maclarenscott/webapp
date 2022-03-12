@@ -1,9 +1,14 @@
 const contentPostForm = document.querySelector("#content-post");
 const generalChat = document.querySelector("#chat-general");
+const chatPanel = document.querySelectorAll(".chat-panel-option");
 
-generalChat.addEventListener('click',()=>{
-    load_chat_page('general');
-})
+for(let panelOption of chatPanel){
+    panelOption.addEventListener('click',()=>{
+        load_chat_page(panelOption.innerText);
+    })
+}
+
+
 //collects all data from post form and calls a post_request 
 contentPostForm.addEventListener("submit", (data) => {
     data.preventDefault()
@@ -44,7 +49,7 @@ function post_request(username, title, content, chat) {
     // .then(()=>{
     //     console.log("worked");
     // });
-    // build_post_card(username,title,content,chat)
+    build_post_card(username,title,content,chat)
 }
 function load_chat_page(chat) {
     const data = {
@@ -83,7 +88,7 @@ function build_post_card(username, title, content, chat) {
     postCard.classList.value = "card m-2 p-2";
     postCard.innerHTML =
         `<h4>${title}</h4>
-    <h6>m/${chat}</h6>
+    <h6>${chat}</h6>
     <h6><em>a/${username}</em></h6>
     <p class="m-0">${content}
         <br>
