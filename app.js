@@ -32,7 +32,7 @@ function post_request(username, title, content, chat) {
         content: content,
         chat: chat
     }
-    fetch('http://10.0.0.75:8080/post', {
+    fetch('http://34.125.239.195/post', {
         headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
@@ -55,7 +55,7 @@ function load_chat_page(chat) {
     const data = {
         chat: chat
     }
-    fetch('http://10.0.0.75:8080/loadposts', {
+    fetch('http://34.125.239.195/loadposts', {
         headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
