@@ -85,5 +85,5 @@ def loadposts():
 
 
 if __name__ == "__main__":
-    app.run('34.125.239.195',port=8080)
+    app.run('0.0.0.0')
     serve(app)

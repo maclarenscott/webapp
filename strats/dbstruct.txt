@@ -6,4 +6,5 @@ INSERT INTO posts (user_id, chat, title, content, likes, dislikes)
 VALUES (1,'general','HAI','COOL POST 4U!!',0,0);
 
 git push https://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@github.com/maclarenscott/webapp.git
+git push https://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@github.com/maclarenscott/webapp.git
 
