@@ -69,7 +69,7 @@ function load_chat_page(chat) {
             for (let post of results){
                 chatValue =post.chat;
                 console.log(post.chat);
-                build_post_card(post.username,post.title,post.content,post.chat);
+                build_post_card('anonymous',post.title,post.content,post.chat);
             }
         })
         .catch((e) => {

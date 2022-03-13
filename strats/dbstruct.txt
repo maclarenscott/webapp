@@ -1,1 +1,9 @@
-ID auto increment | userID | chat | title | content | likes | dislikes | startTime 
+ID auto increment, user_id, chat, title, content, likes, dislikes, start_time 
+
+
+//Insert statement
+INSERT INTO posts (user_id, chat, title, content, likes, dislikes)
+VALUES (1,'general','HAI','COOL POST 4U!!',0,0);
+
+git push https://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@github.com/maclarenscott/webapp.git
+

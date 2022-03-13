@@ -50,7 +50,7 @@ def post():
         mycursor.execute(sql, val)
         connection.commit()
         print(mycursor.rowcount, "record inserted.")
-
+        connection.close()
         return jsonify(data)
     except Exception as exc:
         print(str(exc))
@@ -62,10 +62,22 @@ def loadposts():
     try:
         data = request.json
         print(data)
-        chat = data['chat']
-        returnData = [{'title':'HelloWorld','username':'markz','content':'This is a post!','chat':chat},{'title':'HelloWorld','username':'markz','content':'This is a post!','chat':chat},{'title':'HelloWorld','username':'markz','content':'This is a post!','chat':chat}]
-        print( json.dumps(returnData))
-        return json.dumps(returnData)
+        # chat = data['chat']
+        # returnData = [{'title':'HelloWorld','username':'markz','content':'This is a post!','chat':chat},{'title':'HelloWorld','username':'markz','content':'This is a post!','chat':chat},{'title':'HelloWorld','username':'markz','content':'This is a post!','chat':chat}]
+        # print( json.dumps(returnData))
+        connection = conn('157.90.206.38','malvio','Passwordroot1234!','malvio')
+        sql = "SELECT * FROM posts WHERE chat = %s or chat = %s ;"
+        values = ('m/'+data['chat'], data['chat'])
+        mycursor = connection.cursor(buffered=True)
+        mycursor.execute(sql,values)
+        connection.commit()
+        records = mycursor.fetchall()
+        print(records)
+        m=[]
+        for row in records:
+            m.append({"post_id":row[0],"user_id":row[1],"chat":row[2],"title":row[3],"content":row[4],"likes":row[5],"dislikes":row[6],"start_time":str(row[7])})
+
+        return json.dumps(m)
     except Exception as exc:
         print(str(exc))
         return "Server error: " + str(exc)

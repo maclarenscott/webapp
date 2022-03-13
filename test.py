@@ -1,5 +1,14 @@
 import mysql.connector
-
+import json
+class create_dict(dict): 
+  
+    # __init__ function 
+    def __init__(self): 
+        self = dict() 
+          
+    # Function to add key:value 
+    def add(self, key, value): 
+        self[key] = value
 def conn(url,user,pwd,db):
     config = {
     'user': user,
@@ -11,12 +20,19 @@ def conn(url,user,pwd,db):
 
     return mysql.connector.connect(**config)
 
+
 connection = conn('157.90.206.38','malvio','Passwordroot1234!','malvio')
 
-sql = "INSERT INTO posts (user_id, chat, title, content, likes, dislikes) VALUES (%s,%s,%s,%s,%s,%s)"
-val = (1,'general','HAI','COOL POST 4U!!',0,0)
-mycursor = connection.cursor()
-mycursor.execute(sql, val)
+sql = "SELECT * FROM posts WHERE chat = %s or chat = %s ;"
+values = ('m/General', 'General')
+mycursor = connection.cursor(buffered=True)
+mycursor.execute(sql,values)
 connection.commit()
+records = mycursor.fetchall()
+print(records)
 
-print(mycursor.rowcount, "record inserted.")
+m=[]
+for row in records:
+    m.append({"post_id":row[0],"user_id":row[1],"chat":row[2],"title":row[3],"content":row[4],"likes":row[5],"dislikes":row[6],"start_time":str(row[7])})
+
+print(m)
