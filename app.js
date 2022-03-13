@@ -84,7 +84,6 @@ function clear_content() {
 function build_post_card(username, title, content, chat) {
     const postCard = document.createElement("div");
     const newsfeed = document.querySelector("#newsfeed");
-    // postCard.setAttribute("class","card m-2 p-2")
     postCard.classList.value = "card m-2 p-2";
     postCard.innerHTML =
         `<h4>${title}</h4>

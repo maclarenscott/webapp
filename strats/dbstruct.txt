@@ -1,0 +1,1 @@
+ID auto increment | userID | chat | title | content | likes | dislikes | startTime 
