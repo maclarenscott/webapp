@@ -32,7 +32,7 @@ function post_request(username, title, content, chat) {
         content: content,
         chat: chat
     }
-    fetch('http://143.110.220.180/post', {
+    fetch('http://192.168.2.152:5000/post', {
         headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
@@ -55,7 +55,7 @@ function load_chat_page(chat) {
     const data = {
         chat: chat
     }
-    fetch('http://143.110.220.180/loadposts', {
+    fetch('http://192.168.2.152:5000/loadposts', {
         headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
