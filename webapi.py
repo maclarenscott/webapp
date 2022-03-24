@@ -10,13 +10,8 @@ app = Flask(__name__)
 # cors = CORS(app)
 # app.config['CORS_HEADERS'] = 'Content-Type'
 # cors = CORS(app, resources={r"/api/*": {"origins": "*"}})
+app = Flask(__name__)
 CORS(app)
-cors = CORS(app, resource={
-    r"/*":{
-        "origins":"*"
-    }
-})
-
 
 
 def conn(url,user,pwd,db):
@@ -47,6 +42,7 @@ def test():
     return "HELLO WORLD"
 
 @app.route('/post', methods=['POST'])
+@cross_origin()
 def post():
     try:
         data = request.json
@@ -67,6 +63,7 @@ def post():
 
 
 @app.route('/loadposts', methods=['POST'])
+@cross_origin()
 def loadposts():
     try:
         data = request.json
@@ -92,6 +89,10 @@ def loadposts():
         return "Server error: " + str(exc)
 
 
+@app.route('/testpost', methods=['POST'])
+@cross_origin()
+def testpost():
+    return 'hi'
 
 if __name__ == "__main__":
     app.run('0.0.0.0')
